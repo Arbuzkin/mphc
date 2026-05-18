@@ -1,0 +1,908 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
+:root {
+    --bg: #000000;
+    --bg-card: #1f1f1f;
+    --bg-zagolovok: #0e0e0e;
+    --stroke: #262626;
+    --text: #ffffff;
+    --text-muted: #aeaeae;
+    --nav-glass: rgba(255, 255, 255, 0.05);
+    --nav-border: #262626;
+    --btn-bg: #0e0e0e;
+    --btn-border: #262626;
+    --star-empty: #444444;
+    --input-bg: #111111;
+    --input-border: #2a2a2a;
+    --profile-bg: #1a1a1a;
+    --vote-bg: #111111;
+}
+
+body.light {
+    --bg: #ffffff;
+    --bg-card: #ffffff;
+    --bg-zagolovok: #f5f5f5;
+    --stroke: #d0d0d0;
+    --text: #000000;
+    --text-muted: #888888;
+    --nav-glass: rgba(255, 255, 255, 0.8);
+    --nav-border: #e0e0e0;
+    --btn-bg: #f5f5f5;
+    --btn-border: #d0d0d0;
+    --star-empty: #cccccc;
+    --input-bg: #f5f5f5;
+    --input-border: #d0d0d0;
+    --profile-bg: #e8e8e8;
+    --vote-bg: #f5f5f5;
+}
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body {
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-panel {
+    top: 0;
+    width: 100%;
+    height: 69px;
+    position: sticky;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-panel-bg {
+    position: absolute;
+    inset: 0;
+    background-color: var(--nav-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--nav-border);
+}
+
+.main-nav-panel {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 69px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.theme-toggle {
+    font-size: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    user-select: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.theme-toggle:hover {
+    color: var(--text);
+}
+
+.logo {
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.account-link {
+    flex-shrink: 0;
+}
+
+.account {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--stroke);
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.account img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.premii {
+    margin-top: 25px;
+}
+
+.premii img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+.zagolovok {
+    margin: 25px auto;
+    font-size: 14px;
+    border: 1px solid var(--btn-border);
+    border-radius: 35px;
+    text-align: center;
+    width: fit-content;
+    padding: 7px 40px;
+    background-color: var(--btn-bg);
+    letter-spacing: 0.03em;
+}
+
+.recenzii {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 20px 0;
+}
+
+.recenz-card {
+    position: relative;
+    width: 100%;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--stroke);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.recenz-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-media {
+    position: relative;
+    height: 45%;
+    width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, var(--bg-card), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card-stars {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    z-index: 2;
+}
+
+.card-stars img {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.star-svg {
+    width: 18px;
+    height: 18px;
+    fill: #f5c518;
+}
+
+.star-svg.empty {
+    fill: var(--star-empty);
+}
+
+.card-profile {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    z-index: 2;
+    background: var(--profile-bg);
+}
+
+.card-content {
+    flex: 1;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--bg-card);
+}
+
+.card-title {
+    font-weight: 700;
+    text-decoration: underline;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.card-description {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    overflow-y: auto;
+    flex: 1;
+}
+
+.vse-link {
+    display: block;
+    text-align: center;
+    margin: 10px auto 30px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.vse-link:hover {
+    color: var(--text);
+}
+
+.relizy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.katalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0 60px;
+}
+
+.reliz-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--stroke);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.reliz-card:hover {
+    transform: translateY(-4px);
+}
+
+.reliz-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.reliz-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.88), transparent);
+    pointer-events: none;
+}
+
+.reliz-info {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.reliz-title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.3;
+    max-width: 75%;
+    color: #ffffff;
+}
+
+.reliz-year {
+    font-size: 20px;
+    color: #aeaeae;
+    flex-shrink: 0;
+}
+
+.o-nas-section {
+    margin: 20px 0 40px;
+}
+
+.o-nas-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    border: 1px solid var(--btn-border);
+    border-radius: 35px;
+    width: fit-content;
+    padding: 7px 60px;
+    background-color: var(--btn-bg);
+}
+
+.o-nas-title {
+    display: block;
+    max-width: 420px;
+    height: auto;
+    margin: 20px auto 30px;
+}
+
+.o-nas-text {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.write-section {
+    margin: 30px 0 20px;
+}
+
+.write-form-wrap {
+    border: 1px solid var(--stroke);
+    border-radius: 16px;
+    background: var(--bg-card);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 20px;
+    min-height: 220px;
+}
+
+.write-textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--text);
+    resize: none;
+    line-height: 1.6;
+}
+
+.write-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.write-cover-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.write-cover-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+    background: var(--input-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.write-cover-box:hover {
+    border-color: var(--text-muted);
+}
+
+.write-cover-name {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.stars-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 22px 0 16px;
+}
+
+.stars-row span {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--star-empty);
+    user-select: none;
+    transition: color 0.15s, transform 0.1s;
+    line-height: 1;
+}
+
+.stars-row span:hover,
+.stars-row span.active {
+    color: #f5c518;
+    transform: scale(1.1);
+}
+
+.all-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    border: 1px solid var(--btn-border);
+    border-radius: 35px;
+    width: fit-content;
+    padding: 8px 60px;
+    background-color: var(--btn-bg);
+    cursor: pointer;
+}
+
+.cabinet-top {
+    margin: 40px 0 30px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cabinet-user {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cabinet-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--profile-bg);
+    border: 1px solid var(--stroke);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cabinet-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cabinet-name {
+    font-size: 17px;
+    color: var(--text);
+}
+
+.cabinet-description{
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.cabinet-settings-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--stroke);
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.cabinet-settings-btn:hover {
+    background: var(--stroke);
+}
+
+.cabinet-reviews-title {
+    display: block;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    border: 1px solid var(--btn-border);
+    border-radius: 35px;
+    width: fit-content;
+    padding: 8px 60px;
+    background-color: var(--btn-bg);
+}
+
+.nomination-block {
+    margin: 40px 0 50px;
+}
+
+.nomination-title {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.nomination-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.nomination-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.vote-pair {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.vote-btn {
+    flex: 1;
+    padding: 10px 0;
+    background: var(--vote-bg);
+    border: 1px solid var(--btn-border);
+    border-radius: 30px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text);
+    cursor: pointer;
+    text-align: center;
+    line-height: 1;
+    transition: background 0.2s, border-color 0.3s, transform 0.1s;
+}
+
+.vote-btn:hover {
+    transform: scale(1.06);
+    background: var(--stroke);
+}
+
+footer {
+    margin-top: 100px;
+    padding: 22px 0 28px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+        .album-page {
+            margin: 30px 0 60px;
+        }
+
+        /* Большой блок-карточка сверху */
+        .album-card {
+            background: var(--bg-card);
+            border: 1px solid var(--stroke);
+            border-radius: 16px;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 260px 1fr auto;
+            gap: 28px;
+            align-items: start;
+            margin-bottom: 40px;
+        }
+
+        /* Обложка */
+        .album-cover {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: var(--input-bg);
+        }
+
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Центральная колонка */
+        .album-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-top: 4px;
+        }
+
+        .album-name {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 1.2;
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        .album-artist {
+            font-size: 25px;
+            color: var(--text-muted);
+            transition: color 0.3s;
+        }
+
+        .album-date {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-top: 2px;
+            transition: color 0.3s;
+        }
+
+        /* Звёзды рейтинга */
+        .album-stars {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .album-stars .star-icon {
+            font-size: 22px;
+            color: #f5c518;
+            line-height: 1;
+        }
+
+        .album-stars .star-icon.empty {
+            color: var(--star-empty);
+        }
+
+        .album-rating-label {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            transition: color 0.3s;
+        }
+
+        /* Правая колонка — тип + прослушивания */
+        .album-meta-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0;
+            padding-top: 4px;
+            white-space: nowrap;
+        }
+
+        .album-type {
+            font-size: 20px;
+            color: var(--text-muted);
+            transition: color 0.3s;
+        }
+
+        .album-streams-num {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1.1;
+            color: var(--text);
+            margin-top: auto;
+            padding-top: 180px;
+            transition: color 0.3s;
+        }
+
+        .album-streams-label {
+            font-size: 15px;
+            color: var(--text-muted);
+            text-align: right;
+            line-height: 1.4;
+            transition: color 0.3s;
+        }
+
+        /* Нижняя часть: трек-лист + описание */
+        .album-bottom {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 28px;
+            padding: 0 24px 24px;
+            margin-top: -16px;
+        }
+
+        /* Трек-лист */
+        .tracklist-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .tracklist-title {
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 14px;
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        .tracklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tracklist li {
+            font-size: 20px;
+            color: var(--text);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--stroke);
+            line-height: 1.3;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.3s;
+        }
+
+        .tracklist li:hover {
+            color: var(--text-muted);
+        }
+
+        /* Описание альбома */
+        .album-about-col {
+            padding-top: 4px;
+        }
+
+        .album-about-title {
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 18px;
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        .album-about-text {
+            font-weight: 5;
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 14px;
+            transition: color 0.3s;
+        }
+
+
+
+@media (max-width: 810px) {
+    .recenzii,
+    .relizy,
+    .katalog-grid,
+    .nomination-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+                .album-card {
+                grid-template-columns: 180px 1fr;
+            }
+
+            .album-meta-right {
+                grid-column: 1 / -1;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .album-streams-num {
+                padding-top: 0;
+            }
+
+            .album-bottom {
+                grid-template-columns: 180px 1fr;
+            }
+}
+
+@media (max-width: 600px) {
+    .recenzii,
+    .relizy,
+    .katalog-grid,
+    .nomination-items {
+        grid-template-columns: 1fr;
+    }
+
+    .write-form-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-left {
+        gap: 10px;
+    }
+
+    .theme-toggle {
+        font-size: 12px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+                .album-card {
+                grid-template-columns: 1fr;
+            }
+
+            .album-cover {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .album-meta-right {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .album-streams-num {
+                padding-top: 0;
+            }
+
+            .album-bottom {
+                grid-template-columns: 1fr;
+                padding: 0 0 20px;
+            }
+}

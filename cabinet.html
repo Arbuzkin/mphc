@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МФЦ — Личный кабинет</title>
+    <meta name="description" content="Личный кабинет пользователя МФЦ: ваши рецензии, статистика, настройки профиля.">
+    <meta name="keywords" content="личный кабинет, профиль, рецензии, пользователь, статистика, МФЦ">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/theme.js" defer></script>
+</head>
+<body>
+    <header class="nav-panel">
+        <div class="nav-panel-bg"></div>
+        <div class="main-nav-panel">
+            <div class="nav-left">
+                <button class="theme-toggle">light</button>
+                <a href="index.html" class="logo">
+                    <img id="logo-img" src="img/logo_dark.png" alt="Логотип МФЦ">
+                </a>
+            </div>
+            <a href="cabinet.html" class="account-link">
+                <div class="account">
+                    <img src="img/avatar.png" alt="Аватар профиля">
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="cabinet-top">
+                <div class="cabinet-user">
+                    <div class="cabinet-avatar">
+                        <img src="img/avatar.png" alt="Аватар пользователя">
+                    </div>
+                    <p class="cabinet-name">Ваш никнейм</p>
+                    <p class="cabinet-description">Дата регистрации: 01.04.2026</p>
+                    <p class="cabinet-description">Число голосов на премиях: 2</p>
+                    <p class="cabinet-description">Рецензии: 3</p>
+                </div>
+                <button class="cabinet-settings-btn" title="Настройки">⚙</button>
+            </div>
+
+            <div class="cabinet-reviews-title">ваши рецензии</div>
+
+            <div class="recenzii">
+                <div class="recenz-card">
+                    <div class="card-media">
+                        <img class="card-img" src="img/covers/anon_ember_xxx.png" alt="Обложка Anon Ember XXX">
+                        <div class="card-gradient"></div>
+                        <div class="card-stars">
+                            <img src="img/star_full.png" alt="Звезда полная">
+                            <img src="img/star_full.png" alt="Звезда полная">
+                            <img src="img/star_full.png" alt="Звезда полная">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                        </div>
+                    </div>
+                    <img class="card-profile" src="img/avatar.png" alt="Аватар">
+                    <div class="card-content">
+                        <p class="card-title">XXX Santa On My D</p>
+                        <p class="card-description">не очень</p>
+                    </div>
+                </div>
+
+                <div class="recenz-card">
+                    <div class="card-media">
+                        <img class="card-img" src="img/covers/heshteg_derevenchina.jpg" alt="Обложка #деревенщина">
+                        <div class="card-gradient"></div>
+                        <div class="card-stars">
+                            <img src="img/star_full.png" alt="Звезда полная">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                        </div>
+                    </div>
+                    <img class="card-profile" src="img/avatar.png" alt="Аватар">
+                    <div class="card-content">
+                        <p class="card-title">#деревенщина</p>
+                        <p class="card-description">это мой трек</p>
+                    </div>
+                </div>
+
+                <div class="recenz-card">
+                    <div class="card-media">
+                        <img class="card-img" src="img/covers/mvp_miyagi.jpg" alt="Обложка MVP MIYAGI">
+                        <div class="card-gradient"></div>
+                        <div class="card-stars">
+                            <img src="img/star_full.png" alt="Звезда полная">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                            <img src="img/star_empty.png" alt="Звезда пустая">
+                        </div>
+                    </div>
+                    <img class="card-profile" src="img/avatar.png" alt="Аватар">
+                    <div class="card-content">
+                        <p class="card-title">MVP MIYAGI</p>
+                        <p class="card-description">это тоже мой трек</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>мфц все права защищены</p>
+        </footer>
+    </main>
+</body>
+</html>
