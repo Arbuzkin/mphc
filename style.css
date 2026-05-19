@@ -641,197 +641,187 @@ footer p {
     font-size: 13px;
     color: var(--text-muted);
 }
-        .album-page {
-            margin: 30px 0 60px;
-        }
+.album-page {
+    margin: 30px 0 60px;
+}
 
-        /* Большой блок-карточка сверху */
-        .album-card {
-            background: var(--bg-card);
-            border: 1px solid var(--stroke);
-            border-radius: 16px;
-            padding: 24px;
-            display: grid;
-            grid-template-columns: 260px 1fr auto;
-            gap: 28px;
-            align-items: start;
-            margin-bottom: 40px;
-        }
+.album-card {
+    background: var(--bg-card);
+    border: 1px solid var(--stroke);
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 260px 1fr auto;
+    gap: 28px;
+    align-items: start;
+    margin-bottom: 40px;
+}
 
-        /* Обложка */
-        .album-cover {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            border-radius: 12px;
-            overflow: hidden;
-            flex-shrink: 0;
-            background: var(--input-bg);
-        }
+.album-cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--input-bg);
+}
 
-        .album-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-        /* Центральная колонка */
-        .album-info {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding-top: 4px;
-        }
+.album-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 4px;
+}
 
-        .album-name {
-            font-weight: 700;
-            font-size: 25px;
-            line-height: 1.2;
-            color: var(--text);
-            transition: color 0.3s;
-        }
+.album-name {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.2;
+    color: var(--text);
+    transition: color 0.3s;
+}
 
-        .album-artist {
-            font-size: 25px;
-            color: var(--text-muted);
-            transition: color 0.3s;
-        }
+.album-artist {
+    font-size: 25px;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
 
-        .album-date {
-            font-size: 20px;
-            color: var(--text-muted);
-            margin-top: 2px;
-            transition: color 0.3s;
-        }
+.album-date {
+    font-size: 20px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    transition: color 0.3s;
+}
 
-        /* Звёзды рейтинга */
-        .album-stars {
-            display: flex;
-            gap: 6px;
-            align-items: center;
-            margin-top: 10px;
-        }
+.album-stars {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 10px;
+}
 
-        .album-stars .star-icon {
-            font-size: 22px;
-            color: #f5c518;
-            line-height: 1;
-        }
+.album-stars .star-icon {
+    font-size: 22px;
+    color: #f5c518;
+    line-height: 1;
+}
 
-        .album-stars .star-icon.empty {
-            color: var(--star-empty);
-        }
+.album-stars .star-icon.empty {
+    color: var(--star-empty);
+}
 
-        .album-rating-label {
-            font-size: 15px;
-            color: var(--text-muted);
-            margin-top: 4px;
-            transition: color 0.3s;
-        }
+.album-rating-label {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    transition: color 0.3s;
+}
 
-        /* Правая колонка — тип + прослушивания */
-        .album-meta-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 0;
-            padding-top: 4px;
-            white-space: nowrap;
-        }
+.album-meta-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    padding-top: 4px;
+    white-space: nowrap;
+}
 
-        .album-type {
-            font-size: 20px;
-            color: var(--text-muted);
-            transition: color 0.3s;
-        }
+.album-type {
+    font-size: 20px;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
 
-        .album-streams-num {
-            font-weight: 700;
-            font-size: 28px;
-            line-height: 1.1;
-            color: var(--text);
-            margin-top: auto;
-            padding-top: 180px;
-            transition: color 0.3s;
-        }
+.album-streams-num {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1;
+    color: var(--text);
+    margin-top: auto;
+    padding-top: 180px;
+    transition: color 0.3s;
+}
 
-        .album-streams-label {
-            font-size: 15px;
-            color: var(--text-muted);
-            text-align: right;
-            line-height: 1.4;
-            transition: color 0.3s;
-        }
+.album-streams-label {
+    font-size: 15px;
+    color: var(--text-muted);
+    text-align: right;
+    line-height: 1.4;
+    transition: color 0.3s;
+}
 
-        /* Нижняя часть: трек-лист + описание */
-        .album-bottom {
-            display: grid;
-            grid-template-columns: 260px 1fr;
-            gap: 28px;
-            padding: 0 24px 24px;
-            margin-top: -16px;
-        }
+.album-bottom {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 28px;
+    padding: 0 24px 24px;
+    margin-top: -16px;
+}
 
-        /* Трек-лист */
-        .tracklist-col {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
+.tracklist-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
 
-        .tracklist-title {
-            font-weight: 700;
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 14px;
-            color: var(--text);
-            transition: color 0.3s;
-        }
+.tracklist-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 14px;
+    color: var(--text);
+    transition: color 0.3s;
+}
 
-        .tracklist {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-        }
+.tracklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
 
-        .tracklist li {
-            font-size: 20px;
-            color: var(--text);
-            padding: 8px 0;
-            border-bottom: 1px solid var(--stroke);
-            line-height: 1.3;
-            cursor: pointer;
-            transition: color 0.2s, border-color 0.3s;
-        }
+.tracklist li {
+    font-size: 20px;
+    color: var(--text);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--stroke);
+    line-height: 1.3;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.3s;
+}
 
-        .tracklist li:hover {
-            color: var(--text-muted);
-        }
+.tracklist li:hover {
+    color: var(--text-muted);
+}
 
-        /* Описание альбома */
-        .album-about-col {
-            padding-top: 4px;
-        }
+.album-about-col {
+    padding-top: 4px;
+}
 
-        .album-about-title {
-            font-weight: 700;
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 18px;
-            color: var(--text);
-            transition: color 0.3s;
-        }
+.album-about-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 18px;
+    color: var(--text);
+    transition: color 0.3s;
+}
 
-        .album-about-text {
-            font-weight: 5;
-            font-size: 20px;
-            line-height: 1.8;
-            color: var(--text);
-            margin-bottom: 14px;
-            transition: color 0.3s;
-        }
-
-
+.album-about-text {
+    font-weight: 5;
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 14px;
+    transition: color 0.3s;
+}
 
 @media (max-width: 810px) {
     .recenzii,
@@ -840,24 +830,21 @@ footer p {
     .nomination-items {
         grid-template-columns: repeat(2, 1fr);
     }
-                .album-card {
-                grid-template-columns: 180px 1fr;
-            }
-
-            .album-meta-right {
-                grid-column: 1 / -1;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .album-streams-num {
-                padding-top: 0;
-            }
-
-            .album-bottom {
-                grid-template-columns: 180px 1fr;
-            }
+    .album-card {
+        grid-template-columns: 180px 1fr;
+    }
+    .album-meta-right {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .album-streams-num {
+        padding-top: 0;
+    }
+    .album-bottom {
+        grid-template-columns: 180px 1fr;
+    }
 }
 
 @media (max-width: 600px) {
@@ -867,42 +854,142 @@ footer p {
     .nomination-items {
         grid-template-columns: 1fr;
     }
-
     .write-form-wrap {
         grid-template-columns: 1fr;
     }
-
     .nav-left {
         gap: 10px;
     }
-
     .theme-toggle {
         font-size: 12px;
     }
-
     .logo img {
         height: 32px;
     }
-                .album-card {
-                grid-template-columns: 1fr;
-            }
+    .album-card {
+        grid-template-columns: 1fr;
+    }
+    .album-cover {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .album-meta-right {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .album-streams-num {
+        padding-top: 0;
+    }
+    .album-bottom {
+        grid-template-columns: 1fr;
+        padding: 0 0 20px;
+    }
+}
 
-            .album-cover {
-                max-width: 200px;
-                margin: 0 auto;
-            }
-
-            .album-meta-right {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .album-streams-num {
-                padding-top: 0;
-            }
-
-            .album-bottom {
-                grid-template-columns: 1fr;
-                padding: 0 0 20px;
-            }
+/* ДОБАВЛЕНИЯ ДЛЯ СОТРУДНИКОВ И СОЦСЕТЕЙ */
+.team-section {
+    margin: 50px 0 40px;
+}
+.team-title {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin: 30px 0 20px;
+    letter-spacing: 1px;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 20px 0;
+}
+.team-card {
+    background: var(--bg-card);
+    border: 1px solid var(--stroke);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.team-card:hover {
+    transform: translateY(-4px);
+}
+.team-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border: 1px solid var(--stroke);
+}
+.team-name {
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.team-role {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--text);
+    text-decoration: none;
+    transition: 0.2s;
+}
+.social-link:hover {
+    background: var(--stroke);
+    transform: scale(1.05);
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.footer-social .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+}
+.footer-contacts {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.footer-contacts span {
+    color: var(--text-muted);
+}
+.footer-contacts a {
+    color: var(--text-muted);
+    text-decoration: underline;
+}
+.footer-contacts a:hover {
+    color: var(--text);
+}
+@media (max-width: 700px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
 }

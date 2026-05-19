@@ -3,145 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МФЦ — Главная</title>
     <meta name="description" content="Главная страница музыкального портала МФЦ: популярные рецензии, последние релизы, информация о проекте.">
-    <meta name="keywords" content="музыка, рецензии, главная, МФЦ, портал, популярные рецензии, последние релизы">
+    <meta name="keywords" content="музыка, рецензии, главная, МФЦ, портал, популярные рецензии, последние релизы, музыкальный портал, рецензии на альбомы">
+    <title>МФЦ — Главная</title>
     <link rel="stylesheet" href="style.css">
     <script src="js/theme.js" defer></script>
 </head>
 <body>
-    <header class="nav-panel">
-        <div class="nav-panel-bg"></div>
-        <div class="main-nav-panel">
-            <div class="nav-left">
-                <button class="theme-toggle">light</button>
-                <a href="index.html" class="logo">
-                    <img id="logo-img" src="img/logo_dark.png" alt="Логотип МФЦ">
-                </a>
-            </div>
-            <a href="cabinet.html" class="account-link">
-                <div class="account">
-                    <img src="img/avatar.png" alt="Аватар профиля">
-                </div>
+
+<header class="nav-panel">
+    <div class="nav-panel-bg"></div>
+    <div class="main-nav-panel">
+        <div class="nav-left">
+            <button class="theme-toggle">light</button>
+            <a href="index.html" class="logo" itemscope itemtype="https://schema.org/Organization">
+                <img id="logo-img" src="img/logo_dark.png" alt="Логотип МФЦ" itemprop="logo">
+                <meta itemprop="name" content="Музыкально-Феноменальный Ценитель (МФЦ)">
+                <meta itemprop="url" content="https://mfcentr.ru/">
+                <meta itemprop="sameAs" content="https://vk.com/mfc">
+                <meta itemprop="sameAs" content="https://t.me/mfc">
             </a>
         </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <div class="premii">
-                <a href="premii.html">
-                    <img src="img/premiya.png" alt="Премия">
-                </a>
+        <a href="cabinet.html" class="account-link">
+            <div class="account">
+                <img src="img/avatar.png" alt="Аватар профиля">
             </div>
+        </a>
+    </div>
+</header>
 
-            <div class="zagolovok"><p>самые популярные рецензии</p></div>
+<main>
+    <div class="container">
+        <div class="premii">
+            <a href="premii.html">
+                <img src="img/premiya.png" alt="Премия МФЦ 2026">
+            </a>
+        </div>
 
-            <div class="recenzii">
-                <div class="recenz-card">
-                    <div class="card-media">
-                        <img class="card-img" src="img/covers/black_sabbath_cover.png" alt="Обложка Black Sabbath Paranoid">
-                        <div class="card-gradient"></div>
-                        <div class="card-stars">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_empty.png" alt="Звезда пустая">
-                        </div>
-                    </div>
-                    <img class="card-profile" src="img/avatars/standof_ava.jpg" alt="Аватар standof">
-                    <div class="card-content">
-                        <p class="card-title">Paranoid</p>
-                        <p class="card-description">хороший альбом немного не оч ну так совсем немношко понравился только один трек ну он такой себе все равно ЛОЛ</p>
+        <h1 class="zagolovok">Музыкальный портал МФЦ — рецензии, оценки, премии</h1>
+
+        <div class="zagolovok"><p>самые популярные рецензии</p></div>
+        <div class="recenzii">
+            <div class="recenz-card">
+                <div class="card-media">
+                    <img class="card-img" src="img/covers/black_sabbath_cover.png" alt="Обложка Black Sabbath Paranoid">
+                    <div class="card-gradient"></div>
+                    <div class="card-stars">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_empty.png" alt="Звезда пустая">
                     </div>
                 </div>
-
-                <div class="recenz-card">
-                    <div class="card-media">
-                        <img class="card-img" src="img/covers/Larks_tongues_in_aspic_album_cover.jpg" alt="Обложка Larks Tongues in Aspic">
-                        <div class="card-gradient"></div>
-                        <div class="card-stars">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                        </div>
-                    </div>
-                    <img class="card-profile" src="img/avatars/krutaya_ava.png" alt="Аватар krutaya_ava">
-                    <div class="card-content">
-                        <p class="card-title">larks tongues in aspic</p>
-                        <p class="card-description">ОЧЕНЬ СУПЕР КРУТО, я уроки ночью делаю там тихо в начале, на бутылках играет, а потом как ВЗОРВАЛОСЬ и там трубы и гитары и вообще, очень потрясающая вещь</p>
-                    </div>
-                </div>
-
-                <div class="recenz-card">
-                    <div class="card-media">
-                        <img class="card-img" src="img/covers/Slaang.jpg" alt="Обложка SLAANG">
-                        <div class="card-gradient"></div>
-                        <div class="card-stars">
-                            <img src="img/star_full.png" alt="Звезда полная">
-                            <img src="img/star_empty.png" alt="Звезда пустая">
-                            <img src="img/star_empty.png" alt="Звезда пустая">
-                            <img src="img/star_empty.png" alt="Звезда пустая">
-                            <img src="img/star_empty.png" alt="Звезда пустая">
-                        </div>
-                    </div>
-                    <img class="card-profile" src="img/avatars/spike.png" alt="Аватар spike">
-                    <div class="card-content">
-                        <p class="card-title">SLAANG</p>
-                        <p class="card-description">даже вкусняшки деда ремикс звучитлучше чем арни и его некудышный трек про то, как он брбр игру, ЙОУ</p>
-                    </div>
+                <img class="card-profile" src="img/avatars/standof_ava.jpg" alt="Аватар standof">
+                <div class="card-content">
+                    <p class="card-title">Paranoid</p>
+                    <p class="card-description">хороший альбом немного не оч ну так совсем немношко понравился только один трек ну он такой себе все равно ЛОЛ</p>
                 </div>
             </div>
-
-            <a class="vse-link" href="recenzii.html">все рецензии...</a>
-
-            <div class="zagolovok"><p>последние релизы на сайте</p></div>
-
-            <div class="relizy">
-                <div class="reliz-card">
-                    <img class="reliz-img" src="img/covers/crimson_king.jpeg" alt="Обложка In The Court Of The Crimson King">
-                    <div class="reliz-gradient"></div>
-                    <div class="reliz-info">
-                        <p class="reliz-title">In The Court Of The Crimson King</p>
-                        <p class="reliz-year">1981</p>
+            <div class="recenz-card">
+                <div class="card-media">
+                    <img class="card-img" src="img/covers/Larks_tongues_in_aspic_album_cover.jpg" alt="Обложка Larks Tongues in Aspic">
+                    <div class="card-gradient"></div>
+                    <div class="card-stars">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_full.png" alt="Звезда полная">
                     </div>
                 </div>
-                <a href="album.html">
+                <img class="card-profile" src="img/avatars/krutaya_ava.png" alt="Аватар krutaya_ava">
+                <div class="card-content">
+                    <p class="card-title">larks tongues in aspic</p>
+                    <p class="card-description">ОЧЕНЬ СУПЕР КРУТО, я уроки ночью делаю там тихо в начале, на бутылках играет, а потом как ВЗОРВАЛОСЬ и там трубы и гитары и вообще, очень потрясающая вещь</p>
+                </div>
+            </div>
+            <div class="recenz-card">
+                <div class="card-media">
+                    <img class="card-img" src="img/covers/Slaang.jpg" alt="Обложка SLAANG">
+                    <div class="card-gradient"></div>
+                    <div class="card-stars">
+                        <img src="img/star_full.png" alt="Звезда полная">
+                        <img src="img/star_empty.png" alt="Звезда пустая">
+                        <img src="img/star_empty.png" alt="Звезда пустая">
+                        <img src="img/star_empty.png" alt="Звезда пустая">
+                        <img src="img/star_empty.png" alt="Звезда пустая">
+                    </div>
+                </div>
+                <img class="card-profile" src="img/avatars/spike.png" alt="Аватар spike">
+                <div class="card-content">
+                    <p class="card-title">SLAANG</p>
+                    <p class="card-description">даже вкусняшки деда ремикс звучитлучше чем арни и его некудышный трек про то, как он брбр игру, ЙОУ</p>
+                </div>
+            </div>
+        </div>
+        <a class="vse-link" href="recenzii.html">все рецензии...</a>
+
+        <div class="zagolovok"><p>последние релизы на сайте</p></div>
+        <div class="relizy">
+            <div class="reliz-card">
+                <img class="reliz-img" src="img/covers/crimson_king.jpeg" alt="Обложка In The Court Of The Crimson King">
+                <div class="reliz-gradient"></div>
+                <div class="reliz-info"><p class="reliz-title">In The Court Of The Crimson King</p><p class="reliz-year">1981</p></div>
+            </div>
+            <a href="album.html">
                 <div class="reliz-card">
                     <img class="reliz-img" src="img/covers/rockstar_cycle.jpg" alt="Обложка Rockstar Cycle">
                     <div class="reliz-gradient"></div>
-                    <div class="reliz-info">
-                        <p class="reliz-title">Rockstar Cycle</p>
-                        <p class="reliz-year">2024</p>
-                    </div>
+                    <div class="reliz-info"><p class="reliz-title">Rockstar Cycle</p><p class="reliz-year">2024</p></div>
                 </div>
-                </a>
-                <div class="reliz-card">
-                    <img class="reliz-img" src="img/covers/ice.png" alt="Обложка ICE">
-                    <div class="reliz-gradient"></div>
-                    <div class="reliz-info">
-                        <p class="reliz-title">ICE</p>
-                        <p class="reliz-year">2021</p>
-                    </div>
-                </div>
-            </div>
-
-            <a class="vse-link" href="katalog.html">все релизы...</a>
-
-            <div class="o-nas-section">
-                <div class="o-nas-btn">о нас</div>
-                <img id="big-logo-img" class="o-nas-title" src="img/big_logo_dark.png" alt="Большой логотип МФЦ">
-                <p class="o-nas-text">Музыкально-Феноменальный Ценитель (сокр.МФЦ) - это сайт для рецензирования музыки, где каждый может поделиться своим мнением о волнующей себя музыки.</p>
-                <p class="o-nas-text">Уникальная система оценки делает этот сайт лучшим среди конкурентов. Строгая модерация, большой каталог песен и быстрая поддержка делает этот сайт любимым среди любителей послушать музыку</p>
+            </a>
+            <div class="reliz-card">
+                <img class="reliz-img" src="img/covers/ice.png" alt="Обложка ICE">
+                <div class="reliz-gradient"></div>
+                <div class="reliz-info"><p class="reliz-title">ICE</p><p class="reliz-year">2021</p></div>
             </div>
         </div>
+        <a class="vse-link" href="katalog.html">все релизы...</a>
 
-        <footer>
-            <p>мфц все права защищены</p>
-        </footer>
-    </main>
+        <!-- РАСШИРЕННЫЙ БЛОК О НАС -->
+        <div class="o-nas-section" itemscope itemtype="https://schema.org/AboutPage">
+            <meta itemprop="mainEntity" content="Музыкально-Феноменальный Ценитель">
+
+            <h2 class="o-nas-btn" itemprop="name">о нас</h2>
+
+            <img id="big-logo-img" class="o-nas-title" src="img/big_logo_dark.png" alt="Большой логотип МФЦ" itemprop="image">
+
+            <p class="o-nas-text"><strong>Музыкально-Феноменальный Ценитель (МФЦ)</strong> — это сайт для <em>рецензирования музыки</em>, где каждый может поделиться своим мнением о волнующей себя музыки.</p>
+            <p class="o-nas-text"><u>Уникальная система оценки</u> делает этот сайт лучшим среди конкурентов. <strong>Строгая модерация</strong>, <em>большой каталог песен</em> и <strong>быстрая поддержка</strong> делает этот сайт любимым среди любителей послушать музыку.</p>
+
+            <h3 class="team-title">Как мы работаем изнутри</h3>
+            <p class="o-nas-text">Наша команда ежедневно обрабатывает десятки <strong>рецензий на альбомы</strong>, проверяет их уникальность и публикует на сайте. Мы <em>ценим мнение каждого пользователя</em> и стараемся создать <u>дружелюбное сообщество</u> меломанов. Внутренняя работа включает:</p>
+            <ul class="o-nas-text" style="margin-left: 30px; margin-bottom: 20px;">
+                <li><strong>Модерация текстов</strong> — проверка на спам и оскорбления.</li>
+                <li><em>Оценка альбомов</em> — честное голосование без накруток.</li>
+                <li><u>Премии МФЦ</u> — ежегодное награждение лучших релизов.</li>
+                <li><strong>Техподдержка</strong> — ответы на вопросы в течение 24 часов.</li>
+            </ul>
+
+            <!-- Блок сотрудников с соцсетями -->
+            <h3 class="team-title">Наши сотрудники</h3>
+            <div class="team-grid">
+                <div class="team-card" itemscope itemtype="https://schema.org/Person">
+                    <img class="team-avatar" src="img/avatars/standof_ava.jpg" alt="Аватар Александра" itemprop="image">
+                    <div class="team-name" itemprop="name">Александр М.</div>
+                    <div class="team-role" itemprop="jobTitle">Главный редактор</div>
+                    <div class="social-links" itemprop="sameAs">
+                        <a href="https://vk.com/mfc" class="social-link" target="_blank" rel="noopener">VK</a>
+                        <a href="https://t.me/mfc" class="social-link" target="_blank" rel="noopener">TG</a>
+                        <a href="https://ok.ru/mfc" class="social-link" target="_blank" rel="noopener">OK</a>
+                    </div>
+                </div>
+                <div class="team-card" itemscope itemtype="https://schema.org/Person">
+                    <img class="team-avatar" src="img/avatars/krutaya_ava.png" alt="Аватар Елены" itemprop="image">
+                    <div class="team-name" itemprop="name">Елена В.</div>
+                    <div class="team-role" itemprop="jobTitle">Модератор рецензий</div>
+                    <div class="social-links" itemprop="sameAs">
+                        <a href="https://vk.com/mfc" class="social-link" target="_blank" rel="noopener">VK</a>
+                        <a href="https://t.me/mfc" class="social-link" target="_blank" rel="noopener">TG</a>
+                    </div>
+                </div>
+                <div class="team-card" itemscope itemtype="https://schema.org/Person">
+                    <img class="team-avatar" src="img/avatars/spike.png" alt="Аватар Дмитрия" itemprop="image">
+                    <div class="team-name" itemprop="name">Дмитрий К.</div>
+                    <div class="team-role" itemprop="jobTitle">Технический специалист</div>
+                    <div class="social-links" itemprop="sameAs">
+                        <a href="https://t.me/mfc" class="social-link" target="_blank" rel="noopener">TG</a>
+                        <a href="https://ok.ru/mfc" class="social-link" target="_blank" rel="noopener">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://vk.com/mfc" class="social-link" target="_blank" rel="noopener">VK</a>
+            <a href="https://t.me/mfc" class="social-link" target="_blank" rel="noopener">TG</a>
+            <a href="https://ok.ru/mfc" class="social-link" target="_blank" rel="noopener">OK</a>
+        </div>
+        <div class="footer-contacts">
+            <span>Телефон: +7 (999) 123-45-67</span>
+            <span>Email: <a href="mailto:info@mfcentr.ru">info@mfcentr.ru</a></span>
+            <span>Адрес: г. Москва, ул. Музыкальная, д. 8</span>
+        </div>
+        <p>мфц все права защищены</p>
+    </footer>
+</main>
 </body>
 </html>
