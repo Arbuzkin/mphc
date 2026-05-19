@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mfcentr.ru/sitemap.xml
+Sitemap: https://arbuzkin.github.io/mphc/sitemap.xml

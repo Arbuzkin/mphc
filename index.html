@@ -123,18 +123,19 @@
         </div>
         <a class="vse-link" href="katalog.html">все релизы...</a>
 
-        <!-- РАСШИРЕННЫЙ БЛОК О НАС -->
-        <div class="o-nas-section" itemscope itemtype="https://schema.org/AboutPage">
-            <meta itemprop="mainEntity" content="Музыкально-Феноменальный Ценитель">
 
+        
+         <div class="o-nas-section" itemscope itemtype="https://schema.org/Organization">
             <h2 class="o-nas-btn" itemprop="name">о нас</h2>
 
-            <img id="big-logo-img" class="o-nas-title" src="img/big_logo_dark.png" alt="Большой логотип МФЦ" itemprop="image">
+            <img id="big-logo-img" class="o-nas-title" src="img/big_logo_dark.png" alt="Большой логотип МФЦ" itemprop="logo">
 
-            <p class="o-nas-text"><strong>Музыкально-Феноменальный Ценитель (МФЦ)</strong> — это сайт для <em>рецензирования музыки</em>, где каждый может поделиться своим мнением о волнующей себя музыки.</p>
-            <p class="o-nas-text"><u>Уникальная система оценки</u> делает этот сайт лучшим среди конкурентов. <strong>Строгая модерация</strong>, <em>большой каталог песен</em> и <strong>быстрая поддержка</strong> делает этот сайт любимым среди любителей послушать музыку.</p>
+            <div itemprop="description">
+                <p class="o-nas-text"><strong>Музыкально-Феноменальный Ценитель (МФЦ)</strong> — это сайт для <em>рецензирования музыки</em>, где каждый может поделиться своим мнением о волнующей себя музыки.</p>
+                <p class="o-nas-text"><u>Уникальная система оценки</u> делает этот сайт лучшим среди конкурентов. <strong>Строгая модерация</strong>, <em>большой каталог песен</em> и <strong>быстрая поддержка</strong> делает этот сайт любимым среди любителей послушать музыку.</p>
+            </div>
 
-            <h3 class="team-title">Как мы работаем изнутри</h3>
+            <h3 class="team-title" itemprop="alternativeHeadline">Как мы работаем изнутри</h3>
             <p class="o-nas-text">Наша команда ежедневно обрабатывает десятки <strong>рецензий на альбомы</strong>, проверяет их уникальность и публикует на сайте. Мы <em>ценим мнение каждого пользователя</em> и стараемся создать <u>дружелюбное сообщество</u> меломанов. Внутренняя работа включает:</p>
             <ul class="o-nas-text" style="margin-left: 30px; margin-bottom: 20px;">
                 <li><strong>Модерация текстов</strong> — проверка на спам и оскорбления.</li>
@@ -143,10 +144,9 @@
                 <li><strong>Техподдержка</strong> — ответы на вопросы в течение 24 часов.</li>
             </ul>
 
-            <!-- Блок сотрудников с соцсетями -->
             <h3 class="team-title">Наши сотрудники</h3>
             <div class="team-grid">
-                <div class="team-card" itemscope itemtype="https://schema.org/Person">
+                <div class="team-card" itemscope itemtype="https://schema.org/Person" itemprop="employee">
                     <img class="team-avatar" src="img/avatars/standof_ava.jpg" alt="Аватар Александра" itemprop="image">
                     <div class="team-name" itemprop="name">Александр М.</div>
                     <div class="team-role" itemprop="jobTitle">Главный редактор</div>
@@ -156,7 +156,7 @@
                         <a href="https://ok.ru/mfc" class="social-link" target="_blank" rel="noopener">OK</a>
                     </div>
                 </div>
-                <div class="team-card" itemscope itemtype="https://schema.org/Person">
+                <div class="team-card" itemscope itemtype="https://schema.org/Person" itemprop="employee">
                     <img class="team-avatar" src="img/avatars/krutaya_ava.png" alt="Аватар Елены" itemprop="image">
                     <div class="team-name" itemprop="name">Елена В.</div>
                     <div class="team-role" itemprop="jobTitle">Модератор рецензий</div>
@@ -165,7 +165,7 @@
                         <a href="https://t.me/mfc" class="social-link" target="_blank" rel="noopener">TG</a>
                     </div>
                 </div>
-                <div class="team-card" itemscope itemtype="https://schema.org/Person">
+                <div class="team-card" itemscope itemtype="https://schema.org/Person" itemprop="employee">
                     <img class="team-avatar" src="img/avatars/spike.png" alt="Аватар Дмитрия" itemprop="image">
                     <div class="team-name" itemprop="name">Дмитрий К.</div>
                     <div class="team-role" itemprop="jobTitle">Технический специалист</div>
