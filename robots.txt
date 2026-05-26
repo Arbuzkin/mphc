@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arbuzkin.github.io/mphc/sitemap.xml
+Sitemap: http://a1270570.xsph.ru/sitemap.xml
