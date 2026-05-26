@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url(JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,700&display=swap');
 
 :root {
     --bg: #000000;
@@ -40,7 +37,7 @@ body.light {
 }
 
 * {
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 300;
     padding: 0;
     margin: 0;
@@ -103,7 +100,7 @@ a {
     cursor: pointer;
     background: none;
     border: none;
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 300;
     user-select: none;
     white-space: nowrap;
@@ -431,7 +428,7 @@ a {
     background: transparent;
     border: none;
     outline: none;
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 300;
     font-size: 14px;
     color: var(--text);
@@ -619,7 +616,7 @@ a {
     background: var(--vote-bg);
     border: 1px solid var(--btn-border);
     border-radius: 30px;
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 300;
     font-size: 18px;
     color: var(--text);
@@ -950,7 +947,7 @@ footer p {
     border-radius: 50%;
     background: var(--btn-bg);
     border: 1px solid var(--btn-border);
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 300;
     font-size: 14px;
     color: var(--text);
