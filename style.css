@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'JetBrains Mono';
     src: url(JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf);
+    font-display: swap;
 }
 
 :root {
@@ -824,6 +825,13 @@ footer p {
     color: var(--text);
     margin-bottom: 14px;
     transition: color 0.3s;
+}
+
+.error-text{
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 @media (max-width: 810px) {

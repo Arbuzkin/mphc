@@ -1,3 +1,6 @@
 <FilesMatch ".(fiv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
     Header set Cache-Control "max-age=2592000"
 </FilesMatch>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
